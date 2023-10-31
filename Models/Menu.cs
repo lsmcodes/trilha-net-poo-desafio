@@ -88,6 +88,7 @@ namespace DesafioPOO.Models
         {
             int progressoAtual = 0;
 
+            Thread.Sleep(2000);
             while(progressoAtual != 100)
             {
                 progressoAtual += 20;
