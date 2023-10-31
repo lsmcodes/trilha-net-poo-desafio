@@ -1,11 +1,31 @@
 ﻿using DesafioPOO.Models;
 
-Console.WriteLine("Smartphone Nokia:");
-Smartphone nokia = new Nokia(numero: "(22)2222-3333", modelo: "Nokia G60", imei: "1111111111", memoria: 64);
-nokia.Ligar();
-nokia.InstalarAplicativo("Telegram");
+Console.OutputEncoding = System.Text.Encoding.UTF8;
 
-Console.WriteLine("\nSmartphone Iphone:");
-Smartphone iphone = new Iphone(numero: "(33)3333-4444", modelo: "Iphone 13", imei: "2222222222", memoria: 128);
-iphone.ReceberLigacao();
-iphone.InstalarAplicativo("WhatsApp");
+bool exibirMenu = true;
+
+while(exibirMenu){
+    Console.Clear();
+    Console.WriteLine("Escolha o seu smartphone:\n");
+    Console.WriteLine("1 - Nokia");
+    Console.WriteLine("2 - Iphone");
+    Console.WriteLine("3 - Sair");
+
+    string opcao = Console.ReadLine();
+
+    switch(opcao)
+    {
+        case "1":
+            Menu.AdicionarCelular("1");
+            break;
+        case "2":
+            Menu.AdicionarCelular("2");
+            break;
+        case "3":
+            exibirMenu = false;
+            break;
+        default:
+            Console.WriteLine("Opção inválida");
+            break;
+    }
+}

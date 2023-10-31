@@ -7,8 +7,8 @@ namespace DesafioPOO.Models
         }
         public override void InstalarAplicativo(string nomeApp)
         {
-            Console.WriteLine("Acessando a AppStore");
-            Console.WriteLine($"Baixando {nomeApp}");
+            Console.WriteLine("\nAcessando a AppStore");
+            Menu.InstalarApp(nomeApp);
         }
     }
 }
